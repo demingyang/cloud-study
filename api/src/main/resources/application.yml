@@ -1,0 +1,18 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: api
+# 服务注册类配置EurekaClientConfigBean  PREFIX = "eureka.client"
+# 服务实例类配置EurekaInstanceConfigBean  PREFIX = "eureka.instance"
+eureka:
+  client:
+    healthcheck:
+      enabled: true # 把eureka客户端的健康检查交给spring-boot-actuator模块
+    serviceUrl:
+    defaultZone: http://localhost:8080/eureka  #指定注册中心
+  instance:
+    instance-id:  #实例名的命名规则
+
+
+
